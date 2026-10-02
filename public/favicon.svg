@@ -1,0 +1,1 @@
+export default function Favicon() { return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#172554"/><path d="M12 35h40M32 12c8 8 12 15 12 22 0 9-5 16-12 18-7-2-12-9-12-18 0-7 4-14 12-22Z" fill="none" stroke="#fbbf24" strokeWidth="4"/><circle cx="32" cy="35" r="4" fill="#fbbf24"/></svg>; }

@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #172033; background: #fff; font-family: Arial, Helvetica, sans-serif; }
+:focus-visible { outline: 3px solid #fbbf24; outline-offset: 3px; }
+.skip-link { position: absolute; left: -9999px; z-index: 999; }
+.skip-link:focus { left: 1rem; top: 1rem; padding: .75rem 1rem; background: white; color: #111827; }

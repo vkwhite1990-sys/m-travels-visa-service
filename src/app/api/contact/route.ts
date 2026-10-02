@@ -1,0 +1,4 @@
+import { NextResponse } from 'next/server';
+import { z } from 'zod';
+const schema=z.object({name:z.string().min(2).max(100),email:z.string().email(),visaType:z.string().min(1),destination:z.string().min(2).max(100),message:z.string().min(10).max(5000),website:z.string().max(0).optional(),consent:z.literal(true)});
+export async function POST(request:Request){try{const body=await request.json();const result=schema.safeParse(body);if(!result.success)return NextResponse.json({error:'Please check the form fields.'},{status:400});if(result.data.website)return NextResponse.json({ok:true});console.info('M TRAVEL\'S contact enquiry received', {name:result.data.name,email:result.data.email,visaType:result.data.visaType,destination:result.data.destination});return NextResponse.json({ok:true});}catch{return NextResponse.json({error:'Invalid request.'},{status:400});}}

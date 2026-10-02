@@ -1,0 +1,5 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+export const metadata: Metadata = { title: 'Visa Services', description: "Explore M TRAVEL'S visa assistance services." };
+const items = ['tourist','business','student','family','work','transit'];
+export default function ServicesPage(){return <section className="mx-auto max-w-6xl px-4 py-16"><h1 className="text-4xl font-black">Visa services</h1><p className="mt-4 max-w-2xl text-lg text-slate-600">We provide practical, step-by-step assistance. We do not guarantee decisions; the relevant immigration authority makes the final decision.</p><div className="mt-10 grid gap-5 md:grid-cols-2">{items.map(x=><Link className="rounded-2xl border p-7 hover:shadow-lg" href={`/services/${x}`} key={x}><h2 className="text-2xl font-bold capitalize">{x} visa</h2><p className="mt-2 text-slate-600">View the process, typical documents and how our support can help.</p><span className="mt-4 inline-block font-bold text-blue-800">View guide →</span></Link>)}</div></section>}
